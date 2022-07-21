@@ -315,3 +315,111 @@ int main(){
   return 0 ;
 }
 */
+/*
+//除2函式
+ double div2(double x){
+          return x/2;
+ }
+ int main(){
+    int N;
+    printf("enter N:");
+    scanf("%d",&N);
+    printf("%f\n",div2(N));
+    return 0 ;
+  }
+*/
+/*
+//乘2函式
+int db2(int x){
+  return x*2;
+}
+
+int main(){
+  int N;
+  printf("enter N:");
+  scanf("%d",&N);
+  printf("乘2=%d",db2(N));
+  return 0 ;
+}
+*/
+/*
+//對兩個整數求最大值
+int max2(int a,int b){
+  int max;
+  max=a;
+  if(b>a){
+    max=b;
+  }
+  return max;
+}
+
+int main(){
+  int a,b;
+  printf("Enter two number:\n");
+  scanf("%d%d",&a,&b);
+  printf("max=%d",max2(a,b));
+  return 0 ;
+}
+*/
+/*
+//對三個變數求最大值(函式)
+int max3(int a,int b,int c){
+  int max;
+  max=a;
+  if (b>max){
+    max=b;
+  }
+  if (c>max){
+    max=c;
+  }
+  return max;
+}
+
+int main(){
+  int a,b,c;
+  printf("Enter three number:\n");
+  scanf("%d%d%d",&a,&b,&c);
+  printf("max=%d",max3(a,b,c));
+  return 0 ;
+}
+*/
+/*
+//用文字繪製實心三角形(函式)
+void print_star(int);
+
+int main(){
+  int N,i,j;
+  printf("Enter N:");
+  scanf("%d",&N);
+  for(i=1;i<=N;i++){
+    print_star(i);
+    printf("\n");
+    }
+  return 0 ;
+}
+
+void print_star(int i){
+  int j ;
+  for(j=1;j<=i;j++){
+    printf("*");
+  }
+  }
+*/
+/*
+//骰子
+void dice();
+
+int main(){
+  srand(time(0));
+  dice();
+  return 0 ;
+}
+
+void dice(){
+  int i ;
+  for(i=1;i<=5;i++){
+    printf("%d\n",rand()%6+1);
+  }
+  return;
+}
+*/
