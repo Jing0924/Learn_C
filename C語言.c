@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
+#include <string.h>
 /*
 //繪製實心三角形
 int main(){
@@ -421,5 +422,133 @@ void dice(){
     printf("%d\n",rand()%6+1);
   }
   return;
+}
+*/
+//印出字串
+/*
+void str_print(char str[]);
+int main(){
+  char str[]={'H','e','l','l','o','\0'};
+  str_print(str);
+  return 0 ;
+}
+
+void str_print(char str[]){
+  int i;
+  for(i=0;str[i]!='\0';i++){
+  printf("%c",str[i]);
+  }
+}
+*/
+/*
+//印出字串佔記憶體空間和字串長度
+int str_len(char str[]){
+  int i=0;
+  while(str[i]!='\0'){
+    i++;
+  }
+  return i ;
+}
+
+int main(){
+  char str[]={"Hello"};
+  printf("length:%zu",sizeof(str));
+  printf("length:%d",str_len(str));
+  return 0;
+}
+*/
+/*
+//印出使用者輸入的字串
+void str_read(char[],int);
+
+int main(){
+  char str[20];
+  printf("Enter the string:\n");
+  str_read(str,14);
+  printf("%s\n",str);
+  return 0 ;
+}
+
+void str_read(char str[],int n){
+  int i;
+  for(i=0;i<n;i++){
+    scanf("%c",&str[i]);
+    if(str[i]=='\n'){
+      break;
+    }
+  }
+  str[i]='\0';
+}
+*/
+/*
+//指標
+int main(){
+  int a=10;
+  int *b=&a;
+  printf("%d\n",a);
+  printf("%d",b);
+  return 0 ;
+}
+*/
+/*
+//指標函式呼叫
+void db2(int *count){
+  *count=*count*2;
+}
+
+int main(){
+  int count=10;
+  db2(&count);
+  printf("%d",count);
+  return 0 ;
+}
+*/
+/*
+//數值交換(指標)
+void swap(int* a,int* b){
+  int t=*a;
+  *a=*b;
+  *b=t;
+}
+
+int main(){
+  int a=10,b=15;
+  swap(&a,&b);
+  printf("a=%d\n",a);
+  printf("b=%d\n",b);
+  return 0 ;
+}
+*/
+/*
+//指標印出陣列元素
+int main(){
+  int v[5]={1,2,3,4,5};
+  int *n=v;
+  for(n=v;n!=&v[5];n++){
+    printf("%d\n",*n);
+  }
+  return 0 ;
+}
+*/
+/*
+//在函式間傳遞陣列(使用指標)
+int maxv(int v[],int);
+
+int main(){
+  int a[3]={3,9,7};
+  printf("max:%d\n",maxv(a,3));
+  int b[5]={3,9,1,2,7};
+  printf("max:%d\n",maxv(b,5));
+  return 0 ;
+}
+
+int maxv(int v[],int N){
+  int max=v[0],i;
+  for(i=1;i<N;i++){
+    if(v[i]>max){
+      max=v[i];
+    }
+  }
+  return max;
 }
 */
